@@ -17,8 +17,8 @@ LESS Rules!
 @headline: 			"ff-enzo-web", sans-serif;
 @statement: 		"ff-nuvo-web-pro", sans-serif;
 @bodyFont: 			"Helvetica Neue", Helvetica, Arial, sans-serif;
-@color: 				#5F5F5F;
-@aLink: 				#182037;
+@color: 			#5F5F5F;
+@aLink: 			#182037;
 @bgColor: 			#EDEDED;
 @maxWidth: 			1400px;
 @normalWidth: 		1000px;
@@ -35,9 +35,9 @@ LESS Rules!
 
 .transition (@speed: 0.3s) {
    -webkit-transition: all @speed ease-in-out;
-   	-moz-transition: all @speed ease-in-out;
-   	  -o-transition: all @speed ease-in-out;
-   		  transition: all @speed ease-in-out;
+   	  -moz-transition: all @speed ease-in-out;
+   	    -o-transition: all @speed ease-in-out;
+   	       transition: all @speed ease-in-out;
 }
 
 .pad {
@@ -58,7 +58,7 @@ Global Styles
 	   -moz-box-sizing: border-box;
 	    -ms-box-sizing: border-box;
 	     -o-box-sizing: border-box;
-		     box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 body {
@@ -98,9 +98,10 @@ h2 {
 	font-weight: 600;
 }
 
-a:link {
+a:link,
+a:visited {
 	text-decoration: none;
-	color: @aLink;
+	color: @color;
 
 	.transition;
 }
@@ -150,6 +151,10 @@ HEADER
 	max-width: 300px;
 	width: 100%;
 	font-size: 16px;
+
+	li.active a {
+		color: @aLink;
+	}
 }
 
 
@@ -171,7 +176,7 @@ HERO
 .work #Hero {
 	text-align: center;
 	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 60px;
 
 	.statement {
 		max-width: 850px;
@@ -221,8 +226,8 @@ MAIN
 	}
 
 	ul.work-thumbs li.thumbs {
-		width: 32%;
-		height: auto;
+		width: 31.5%;
+		height: 100%;
 		margin-bottom: 25px;
 
 		img {
@@ -294,8 +299,9 @@ MAIN
 }
 
 #WorkContent .comps {
-	margin: 100px auto 0;
+	margin: 100px auto 50px;
 	max-width: 1240px;
+	border-bottom: 1px solid #e3e3e3;
 
 	.img-wrap {
 		margin-bottom: 80px;
