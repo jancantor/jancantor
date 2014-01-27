@@ -141,8 +141,6 @@ HEADER
 	height: 50px;
 	display: block;
 	text-indent: -999em;
-
-	background: #182037;
 	border-radius: 50px;
 }
 
@@ -150,10 +148,41 @@ HEADER
 	float: right;
 	max-width: 300px;
 	width: 100%;
+	font-family: @statement;
 	font-size: 16px;
+}
 
-	li.active a {
-		color: @aLink;
+.light {
+	#Logo {
+		background: #182037;
+	}
+
+	#Nav {
+		li a {
+			color: @color;
+			padding-bottom: 5px;
+		}
+
+		li.active a {
+			border-bottom: 4px solid @color;
+		}
+	}
+}
+
+.dark {
+	#Logo {
+		background: white;
+	}
+
+	#Nav {
+		li a {
+			color: white;
+			padding-bottom: 5px;
+		}
+
+		li.active a {
+			border-bottom: 4px solid white;
+		}
 	}
 }
 
@@ -165,7 +194,7 @@ HERO
 ---------------------------------------------------
 */
 
-#Hero {
+.hero {
 	padding-top: 150px;
 
 	.headline {
@@ -173,14 +202,27 @@ HERO
 	}
 }
 
-.work #Hero {
+.light .statement {
+	color: #898989;
+}
+
+.dark .statement {
+	color: white;
+}
+
+.work .hero {
 	text-align: center;
 	padding-top: 40px;
 	padding-bottom: 60px;
 
+	.project-title {
+		width: 485px;
+		height: 75px;
+		margin: 130px auto 0;
+	}
+
 	.statement {
 		max-width: 850px;
-		color: #898989;
 		font-family: @statement;
 		font-size: 24px;
 		margin: 30px auto;
@@ -191,17 +233,21 @@ HERO
 	}
 }
 
-.agbu #Hero {
-	background: #F7F7F7;
+.agbu .hero {
+	background: #f6f6f6;
 	border-bottom: 1px solid #e3e3e3;
+}
 
-	.project-title {
-		width: 485px;
-		height: 75px;
-		margin: 130px auto 0;
-		//text-indent: -999em;
-		//background: url("_work/ag_logo.svg") no-repeat;
-	}
+.projectflow .hero {
+	background: #262B33;
+}
+
+.food .hero {
+	background: #EF7A5A;
+}
+
+.framethat .hero {
+	background: #00B2EE;
 }
 
 
