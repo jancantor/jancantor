@@ -17,11 +17,14 @@ module.exports = function (grunt) {
           livereload: {
             files: [
                 '_config.yml',
-                'index.html',
+                'sass/**',
                 '_layouts/**',
                 '_posts/**',
                 '_includes/**',
-                '_sass/**'
+                'index.html',
+                'frame-it/**',
+                'teaminsights/**',
+                'typenight/**'
             ],
             tasks: ['shell:jekyllBuild'],
             options: {
