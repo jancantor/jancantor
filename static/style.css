@@ -1,0 +1,241 @@
+/*=========================================
+Reset
+=========================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*=========================================
+Style
+=========================================== */
+body {
+  font: 16px "jubilat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #343434;
+  background: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+strong {
+  font-weight: 700; }
+
+a {
+  text-decoration: none;
+  color: #232323;
+  transition: all 0.3s ease-in-out; }
+  a:hover {
+    color: #EF2B35; }
+
+.wrap {
+  max-width: 650px;
+  margin: 50px;
+  padding: 10px; }
+
+header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  -webkit-animation: flipInX 0.8s ease-in 1 forwards 0.5s;
+  animation: flipInX 0.8s ease-in 1 forwards 0.5s; }
+header p {
+  opacity: 0;
+  -webkit-animation: fadeIn 1s ease-in-out 1 forwards 1.5s;
+  animation: fadeIn 1s ease-in-out 1 forwards 1.5s; }
+  header p.headline {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 20px; }
+  header p.body {
+    font-size: 16px;
+    font-weight: 300;
+    color: #676767;
+    line-height: 1.5; }
+
+footer {
+  margin-top: 30px;
+  opacity: 0;
+  -webkit-animation: fadeInUp 0.8s ease-in-out 1 forwards 2.5s;
+  animation: fadeInUp 0.8s ease-in-out 1 forwards 2.5s; }
+  footer a {
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #232323; }
+    footer a.dribbble:hover {
+      color: #E84F89; }
+    footer a.twitter:hover {
+      color: #55ACEE; }
+    footer a.instagram:hover {
+      color: #3A698F; }
+    footer a.linkedin:hover {
+      color: #0072B1; }
+
+/*=========================================
+Keyframe Animation
+=========================================== */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; } }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; } }
+
+@-webkit-keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0; }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in; }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px); } }
+
+@keyframes flipInX {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -ms-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0; }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -ms-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in; }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    -ms-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    -ms-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    -ms-transform: perspective(400px);
+    transform: perspective(400px); } }
+
+/*=========================================
+For mobile
+=========================================== */
+@media screen and (max-width: 320px) {
+  .wrap {
+    margin: 10px; }
+
+  header h1 {
+    margin-bottom: 10px; }
+  header p.headline {
+    font-size: 23px;
+    line-height: 1.3; }
+  header p.body {
+    line-height: 1.4; }
+
+  footer {
+    margin-top: 20px; }
+    footer a {
+      font-size: 13px;
+      margin-right: 10px; } }
