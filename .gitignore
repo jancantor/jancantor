@@ -1,3 +1,7 @@
-# Ignored files
+# Ignore local files
 .DS_Store
 Icon?
+
+# Ignore jekyll files
+_site
+.sass-cache
