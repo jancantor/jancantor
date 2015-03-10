@@ -23,8 +23,8 @@ module.exports = function (grunt) {
                 '_includes/**',
                 'index.html',
                 'frame-it/**',
-                'teaminsights/**',
-                'typenight/**'
+                'team-insights/**',
+                'type-night/**'
             ],
             tasks: ['shell:jekyllBuild'],
             options: {
