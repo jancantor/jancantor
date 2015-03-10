@@ -2,11 +2,10 @@
 title: Jan Cantor
 email: hello@jancantor.com
 description: > # this means to ignore newlines until "baseurl:"
-  Product Designer
+  Digital Product Designer
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jancantor.com" # the base hostname & protocol for your site
-twitter_username: jancantor
-github_username:  jancantor
+my_username: jancantor
 
 # Build settings
 markdown: kramdown
