@@ -2,3 +2,80 @@
 // STYLE
 // ============================================================
 
+// 
+// Layout
+//
+.wrapper {
+  min-height: 100%;
+  padding: 0% 5%;
+}
+.home {
+  background: $home-bg;
+  padding: 5%;
+}
+.frame-it {
+  background: $frame-it;
+}
+.team-insights {
+  background: $team-insights;
+}
+.type-night {
+  background: $type-night;
+}
+
+
+
+// 
+// Container
+//
+.container {
+  background: white;
+  box-shadow: 0 0 40px rgba($grey-dark, 0.09);
+}
+
+// Page Header
+.page-header {
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $grey-light;
+
+  h1 {
+    font-size: 50px;
+    font-weight: 200;
+  }
+
+  p {
+    font-weight: 500;
+  }
+
+  .site-link {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+  }
+}
+
+// Content
+.content {
+  margin-top: $content-spacing;
+}
+
+.section {
+  margin-bottom: $content-spacing;
+
+  .section-heading {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  p {
+    color: $grey;
+    padding: 10px 0;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  ul {}
+}
