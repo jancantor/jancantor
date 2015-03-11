@@ -25,7 +25,8 @@ module.exports = function (grunt) {
                 'index.html',
                 'frame-it/**',
                 'team-insights/**',
-                'type-night/**'
+                'type-night/**',
+                'img/**'
             ],
             tasks: ['shell:jekyllBuild'],
             options: {

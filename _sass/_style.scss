@@ -21,9 +21,29 @@
   background: $team-insights;
 }
 .type-night {
-  background: $type-night;
+  background: $type-night url('/img/typenight-logo-large.png') no-repeat center -30%;
+  background-size: 120%;
 }
 
+//
+// Logo
+//
+.logo {
+  position: relative;
+  color: $white;
+  text-align: center;
+  padding: $spacing-unit;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .home-link {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    color: $white;
+    opacity: 0.5;
+  }
+}
 
 
 // 
