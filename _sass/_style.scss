@@ -14,8 +14,8 @@
   background: $home-bg;
   padding: 5%;
 }
-.frame-it {
-  background: $frame-it url('/img/frameit-logo-large.svg') no-repeat center 0%;;
+.newscred {
+  background: lighten($black, 14%) url('/img/newscred-logo-large.svg') no-repeat center 0%;;
 }
 .team-insights {
   background: $team-insights url('/img/teaminsights-logo-large.svg') no-repeat center -28%;
@@ -26,6 +26,11 @@
     -webkit-linear-gradient(-55deg, rgba(6, 6, 76, 0.9) 25%, rgba(215, 109, 153, 1) 100%);
   background-size: 120%;
 }
+.frame-it {
+  background: $frame-it url('/img/frameit-logo-large.svg') no-repeat center 0%;;
+}
+
+
 
 //
 // Logo
