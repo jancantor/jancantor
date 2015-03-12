@@ -15,10 +15,10 @@
   padding: 5%;
 }
 .frame-it {
-  background: $frame-it;
+  background: $frame-it url('/img/frameit-logo-large.svg') no-repeat center 0%;;
 }
 .team-insights {
-  background: $team-insights;
+  background: $team-insights url('/img/teaminsights-logo-large.svg') no-repeat center -28%;
 }
 .type-night {
   background: 
@@ -30,7 +30,7 @@
 //
 // Logo
 //
-.logo {
+.logo-wrapper {
   position: relative;
   color: $white;
   text-align: center;
@@ -44,6 +44,10 @@
     left: 0;
     color: $white;
     opacity: 0.5;
+  }
+
+  .logo {
+    padding-top: 10px;
   }
 }
 
