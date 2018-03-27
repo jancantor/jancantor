@@ -15,23 +15,11 @@ body {
 	text-rendering:optimizeLegibility;
 }
 
-// a {
-//   text-decoration: none;
-//   color: #013240;
-//   font-weight: 800;
-//   transition: all 0.3s ease-in-out;
-//   &:hover {
-//     color: #F78904;
-//     border-bottom: 2px solid #F78904;
-//   }
-// }
-
 a {
   color: #013240;
   position: relative;
   font-weight: 800;
   text-decoration: none;
-  overflow: hidden;
   &:hover {
     color: #F78904;
   }
@@ -190,104 +178,53 @@ Keyframe Animation
   }
 }
 
-// flipInX
-@-webkit-keyframes flipInX {
-  0% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 0;
-  }
-
-  40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-  }
-
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1;
-  }
-
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-  }
-
-  100% {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
-  }
-}
-@keyframes flipInX {
-  0% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -ms-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 0;
-  }
-
-  40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -ms-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-  }
-
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    -ms-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1;
-  }
-
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    -ms-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-  }
-
-  100% {
-    -webkit-transform: perspective(400px);
-    -ms-transform: perspective(400px);
-    transform: perspective(400px);
-  }
-}
-
 
 /*=========================================
 For mobile
 =========================================== */
+
+@media screen and (max-width: 414px) {
+  .wrap {
+    padding: 45px;
+  }
+  header {
+    .headline {
+      font-size: 22px;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrap {
+    padding: 50px 35px 35px;
+  }
+  header {
+    .headline {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .body {
+      font-size: 15px;
+    }
+  }
+  footer {
+    padding-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .wrap {
-    margin: 10px;
+    padding: 30px;
   }
 
   header {
-    h1 {
-      margin-bottom: 10px;
+    .headline {
+      font-size: 18px;
+      font-weight: 800;
     }
-    p.headline {
-      font-size: 23px;
-      line-height: 1.3;
-    }
-    p.body {
-      line-height: 1.4;
-    }
-  }
-
-  footer {
-    margin-top: 20px;
-    a {
-      font-size: 13px;
-      margin-right: 10px;
+    .body {
+      font-size: 14px;
     }
   }
 }

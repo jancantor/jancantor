@@ -44,8 +44,7 @@ a {
   color: #013240;
   position: relative;
   font-weight: 800;
-  text-decoration: none;
-  overflow: hidden; }
+  text-decoration: none; }
   a:hover {
     color: #F78904; }
   a:after {
@@ -163,80 +162,34 @@ Keyframe Animation
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; } }
-@-webkit-keyframes flipInX {
-  0% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 0; }
-
-  40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in; }
-
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1; }
-
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
-
-  100% {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px); } }
-@keyframes flipInX {
-  0% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -ms-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
-    opacity: 0; }
-
-  40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -ms-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in; }
-
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    -ms-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1; }
-
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    -ms-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
-
-  100% {
-    -webkit-transform: perspective(400px);
-    -ms-transform: perspective(400px);
-    transform: perspective(400px); } }
 /*=========================================
 For mobile
 =========================================== */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 414px) {
   .wrap {
-    margin: 10px; }
+    padding: 45px; }
 
-  header h1 {
-    margin-bottom: 10px; }
-  header p.headline {
-    font-size: 23px;
-    line-height: 1.3; }
-  header p.body {
-    line-height: 1.4; }
+  header .headline {
+    font-size: 22px;
+    line-height: 1.5; } }
+@media screen and (max-width: 375px) {
+  .wrap {
+    padding: 50px 35px 35px; }
+
+  header .headline {
+    font-size: 20px;
+    line-height: 1.5; }
+  header .body {
+    font-size: 15px; }
 
   footer {
-    margin-top: 20px; }
-    footer a {
-      font-size: 13px;
-      margin-right: 10px; } }
+    padding-bottom: 20px; } }
+@media screen and (max-width: 320px) {
+  .wrap {
+    padding: 30px; }
+
+  header .headline {
+    font-size: 18px;
+    font-weight: 800; }
+  header .body {
+    font-size: 14px; } }
