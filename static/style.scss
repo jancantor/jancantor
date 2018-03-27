@@ -8,57 +8,89 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 Style
 =========================================== */
 body {
-	font: 16px "jubilat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #343434;
-  background: #fafafa;
+	font: 16px "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #013240;
+  background: #8F5FFF;
 	-webkit-font-smoothing:antialiased;
 	text-rendering:optimizeLegibility;
 }
 
-strong {
-  font-weight: 700;
-}
+// a {
+//   text-decoration: none;
+//   color: #013240;
+//   font-weight: 800;
+//   transition: all 0.3s ease-in-out;
+//   &:hover {
+//     color: #F78904;
+//     border-bottom: 2px solid #F78904;
+//   }
+// }
 
 a {
+  color: #013240;
+  position: relative;
+  font-weight: 800;
   text-decoration: none;
-  color: #232323;
-  transition: all 0.3s ease-in-out;
+  overflow: hidden;
   &:hover {
-    color: #EF2B35;
+    color: #F78904;
   }
+  &:after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #F78904;
+    content: "";
+    transform: scale(0);
+    transition: transform .3s cubic-bezier(0.11, 0.7, 0, 1);
+  }
+  &:hover:after {
+    transform: scale(1);
+  }
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #fff 50%, #8F5FFF 0);
 }
 
 .wrap {
-  max-width: 650px;
-  margin: 50px;
-  padding: 10px;
+  max-width: 850px;
+  padding: 100px;
 }
 
 header {
-  h1 {
+  .headline {
     font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    opacity: 0;
-    -webkit-animation: fadeInDown 0.8s ease-in 1 forwards 0.5s;
-    animation: fadeInDown 0.8s ease-in 1 forwards 0.5s;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 30px;
+
+    .intro {
+      margin-bottom: 30px;
+      opacity: 0;
+      -webkit-animation: fadeInDown 0.8s ease-in 1 forwards 0.5s;
+      animation: fadeInDown 0.8s ease-in 1 forwards 0.5s;
+    }
+
+    .summary {
+      opacity: 0;
+      -webkit-animation: fadeIn 1s ease-in-out 1 forwards 1.5s;
+      animation: fadeIn 1s ease-in-out 1 forwards 1.5s;
+    }
   }
-  p {
+  .body {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 20px;
     opacity: 0;
     -webkit-animation: fadeIn 1s ease-in-out 1 forwards 1.5s;
     animation: fadeIn 1s ease-in-out 1 forwards 1.5s;
-    &.headline {
-      font-size: 36px;
-      font-weight: 300;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-    &.body {
-      font-size: 16px;
-      font-weight: 300;
-      color: #676767;
-      line-height: 1.5;
-    }
   }
 }
 
@@ -69,21 +101,8 @@ footer {
   animation: fadeInUp 0.8s ease-in-out 1 forwards 2.5s;
   a {
     margin-right: 15px;
-    font-size: 14px;
-    font-weight: 400;
-    color: #232323;
-    &.dribbble:hover {
-      color: #E84F89;
-    }
-    &.twitter:hover {
-      color: #55ACEE;
-    }
-    &.instagram:hover {
-      color: #3A698F;
-    }
-    &.linkedin:hover {
-      color: #0072B1;
-    }
+    font-size: 13px;
+    text-transform: uppercase;
   }
 }
 

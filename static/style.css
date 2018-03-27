@@ -34,48 +34,65 @@ table {
 Style
 =========================================== */
 body {
-  font: 16px "jubilat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #343434;
-  background: #fafafa;
+  font: 16px "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #013240;
+  background: #8F5FFF;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
 
-strong {
-  font-weight: 700; }
-
 a {
+  color: #013240;
+  position: relative;
+  font-weight: 800;
   text-decoration: none;
-  color: #232323;
-  transition: all 0.3s ease-in-out; }
+  overflow: hidden; }
   a:hover {
-    color: #EF2B35; }
+    color: #F78904; }
+  a:after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #F78904;
+    content: "";
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.11, 0.7, 0, 1); }
+  a:hover:after {
+    transform: scale(1); }
+
+.background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, white 50%, #8f5fff 0); }
 
 .wrap {
-  max-width: 600px;
-  margin: 50px;
-  padding: 10px; }
+  max-width: 850px;
+  padding: 100px; }
 
-header h1 {
+header .headline {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 30px; }
+  header .headline .intro {
+    margin-bottom: 30px;
+    opacity: 0;
+    -webkit-animation: fadeInDown 0.8s ease-in 1 forwards 0.5s;
+    animation: fadeInDown 0.8s ease-in 1 forwards 0.5s; }
+  header .headline .summary {
+    opacity: 0;
+    -webkit-animation: fadeIn 1s ease-in-out 1 forwards 1.5s;
+    animation: fadeIn 1s ease-in-out 1 forwards 1.5s; }
+header .body {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
   margin-bottom: 20px;
-  opacity: 0;
-  -webkit-animation: fadeInDown 0.8s ease-in 1 forwards 0.5s;
-  animation: fadeInDown 0.8s ease-in 1 forwards 0.5s; }
-header p {
   opacity: 0;
   -webkit-animation: fadeIn 1s ease-in-out 1 forwards 1.5s;
   animation: fadeIn 1s ease-in-out 1 forwards 1.5s; }
-  header p.headline {
-    font-size: 36px;
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 20px; }
-  header p.body {
-    font-size: 16px;
-    font-weight: 300;
-    color: #676767;
-    line-height: 1.5; }
 
 footer {
   margin-top: 30px;
@@ -84,17 +101,8 @@ footer {
   animation: fadeInUp 0.8s ease-in-out 1 forwards 2.5s; }
   footer a {
     margin-right: 15px;
-    font-size: 14px;
-    font-weight: 400;
-    color: #232323; }
-    footer a.dribbble:hover {
-      color: #E84F89; }
-    footer a.twitter:hover {
-      color: #55ACEE; }
-    footer a.instagram:hover {
-      color: #3A698F; }
-    footer a.linkedin:hover {
-      color: #0072B1; }
+    font-size: 13px;
+    text-transform: uppercase; }
 
 /*=========================================
 Keyframe Animation
@@ -105,14 +113,12 @@ Keyframe Animation
 
   100% {
     opacity: 1; } }
-
 @keyframes fadeIn {
   0% {
     opacity: 0; }
 
   100% {
     opacity: 1; } }
-
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -123,7 +129,6 @@ Keyframe Animation
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -136,7 +141,6 @@ Keyframe Animation
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; } }
-
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -147,7 +151,6 @@ Keyframe Animation
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -160,7 +163,6 @@ Keyframe Animation
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; } }
-
 @-webkit-keyframes flipInX {
   0% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
@@ -187,7 +189,6 @@ Keyframe Animation
   100% {
     -webkit-transform: perspective(400px);
     transform: perspective(400px); } }
-
 @keyframes flipInX {
   0% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
@@ -219,7 +220,6 @@ Keyframe Animation
     -webkit-transform: perspective(400px);
     -ms-transform: perspective(400px);
     transform: perspective(400px); } }
-
 /*=========================================
 For mobile
 =========================================== */
